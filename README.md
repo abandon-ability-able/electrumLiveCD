@@ -18,7 +18,7 @@ Online machine
 Offline machine
 1. boot into usb on an offline machine
 2. run startx in tty
-3. run electrumAppImage in xterm
+3. run electrum in xterm
 4. create wallets, sign transactions, etc
 
 This approach avoids the issues mentioned above
