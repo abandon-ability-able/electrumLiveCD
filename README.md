@@ -1,4 +1,12 @@
-# A free, simple, and secure alternative to hardware wallets
+# Warning
+
+This is my personal strategy for cold storage. It's similar to running Tails OS and electrum on an offline machine but uses the latest version of electrum and only runs electrum. I'm not necessarily recommending this over Tails or hardware wallets, but I'm making it available for anyone who wants to try it or build on it.
+
+I recommend only using this if you're comfortable with the linux terminal and know/willing to learn nix. I have a prebuilt image available under releases, but I suggest following the instructions below to build your own image, after checking the code yourself.
+
+Persistent storage is not enabled. Make sure you write down any secrets or they'll be lost when you power off.
+
+## A free, simple, and secure alternative to hardware wallets
 
 Hardware wallets seem to be the default suggestion for secure storage. I have two issues with this approach:
 - It's difficult to verify what's actually implemented on the device. They're so niche, fragmented, and complex that I doubt there's enough verification
@@ -17,12 +25,11 @@ Online machine
 
 Offline machine
 1. boot into usb on an offline machine
-2. run startx in tty
-3. run electrum in xterm
-4. create wallets, sign transactions, etc
+2. create wallets, sign transactions, etc
+3. if you plug in a usb drive, it'll be available in /media
 
 This approach avoids the issues mentioned above
-- this repo contains <50 lines of code so is easy to audit. IMO the dependencies, nix, xorg, and electrum are trustworthy enough because they're all opensource, heavily used, and have substantial investment behind them. Note that I'm pulling the appimage from the electrum website instead of using the nixpkg due to the potential of malicious code
+- this repo contains <70 lines of code so is easy to audit. IMO the dependencies are trustworthy enough because they're all opensource, heavily used, and have substantial investment behind them. Note that I'm pulling the appimage from the electrum website instead of using the nixpkg due to the potential of malicious code
 - since this is software, you can rebuild and run on any systems you want
 
 If you found this useful, tips are appreciated
