@@ -1,6 +1,6 @@
 # Warning
 
-This is my personal strategy for cold storage. It's similar to running Tails OS and electrum on an offline machine but uses the latest version of electrum and only runs electrum. I'm not necessarily recommending this over Tails or hardware wallets, but I'm making it available for anyone who wants to try it or build on it.
+This is my personal strategy for cold storage. It's similar to running electrum from Tails OS on an offline machine but uses the latest version of electrum and only runs electrum. I'm not necessarily recommending this over Tails or hardware wallets, but I'm making it available for anyone who wants to try it or build on it. 
 
 I recommend only using this if you're comfortable with the linux terminal and know/willing to learn nix. I have a prebuilt image available under releases, but I suggest following the instructions below to build your own image, after checking the code yourself.
 
@@ -26,7 +26,7 @@ Online machine
 Offline machine
 1. boot into usb on an offline machine
 2. create wallets, sign transactions, etc
-3. if you plug in a usb drive, it'll be available in /media
+3. if you boot with another usb drive plugged in, it'll be available in /home/wallet/media
 
 This approach avoids the issues mentioned above
 - this repo contains <70 lines of code so is easy to audit. IMO the dependencies are trustworthy enough because they're all opensource, heavily used, and have substantial investment behind them. Note that I'm pulling the appimage from the electrum website instead of using the nixpkg due to the potential of malicious code
